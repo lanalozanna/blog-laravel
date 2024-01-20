@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,7 +19,7 @@ Route::get('/', function () {
 Route::get('/hello', function () {
     return view('hello');
 });
-Route::get('about', function () {
-    $tags = ['яблоко','apple','kukop','moteda'];
-    return view('about', ['tags' => $tags]);
-});
+Route::get('about', [PageController::class, 'about']);
+
+Route::get('article', [PageController::class, 'article']);
+
