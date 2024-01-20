@@ -20,5 +20,6 @@ Route::get('/hello', function () {
     return view('hello');
 });
 Route::get('about', function () {
-    return view('about');
+    $tags = ['яблоко','apple','kukop','moteda'];
+    return view('about', ['tags' => $tags]);
 });
