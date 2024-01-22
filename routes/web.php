@@ -21,5 +21,6 @@ Route::get('/hello', function () {
 });
 Route::get('about', [PageController::class, 'about']);
 
-Route::get('article', [PageController::class, 'article']);
+Route::get('article', [PageController::class, 'article'])->name('article');
 
+Route::get('message', [PageController::class, 'message'])->name('sometext');

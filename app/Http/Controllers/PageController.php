@@ -18,4 +18,12 @@ class PageController extends Controller
         
         return view('article',['data' => $data] );
     }
+    
+    public function message()
+    {   
+        $mail = Article::simplePaginate(1);
+        
+        return view('message', compact('mail') );
+    }
+    
 }

@@ -12,6 +12,7 @@
             <div>
                 @yield('content')
             </div>
+            <a href="/">Перейти на главную и утий-пути в закат </a>
         </div>
     </body>
 </html>
